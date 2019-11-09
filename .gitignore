@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/java,linux,macos,windows,code-java,jetbrains+all
-# Edit at https://www.gitignore.io/?templates=java,linux,macos,windows,code-java,jetbrains+all
+# Created by https://www.gitignore.io/api/java,linux,macos,gradle,windows,code-java,jetbrains+all
+# Edit at https://www.gitignore.io/?templates=java,linux,macos,gradle,windows,code-java,jetbrains+all
 
 ### Code-Java ###
 # Language Support for Java(TM) by Red Hat extension for Visual Studio Code - https://marketplace.visualstudio.com/items?itemName=redhat.java
@@ -189,4 +189,23 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/java,linux,macos,windows,code-java,jetbrains+all
+### Gradle ###
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# End of https://www.gitignore.io/api/java,linux,macos,gradle,windows,code-java,jetbrains+all
