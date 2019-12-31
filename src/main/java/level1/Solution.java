@@ -1,5 +1,7 @@
 package level1;
 
+import java.awt.event.HierarchyListener;
+
 public class Solution {
 
     // Fibonacci Number
@@ -12,6 +14,17 @@ public class Solution {
             return  n;
         else
             return fib(n-1) + fib(n-2);
+    }
+
+    // Delete a List's Head Node
+    public static ListNode deleteAtHead(ListNode head) {
+        if (head != null) {
+            ListNode curr = head.next;
+            head.next = null;
+            return curr;
+        } else {
+            return null;
+        }
     }
 
 }
