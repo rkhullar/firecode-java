@@ -1,8 +1,11 @@
 package level1;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.MethodSource;
+
+import java.util.stream.Stream;
 
 import static level1.Solution.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +19,11 @@ class SolutionTest {
         assertEquals(e, y);
     }
 
-    private <T> void testDeleteAtHead(T arr_x[], T arr_e[]) {
+
+    @ParameterizedTest
+    @MethodSource("provideArgsForTestDeleteAtHead")
+    @SuppressWarnings("unchecked")
+    <T> void testDeleteAtHead(T arr_x[], T arr_e[]) {
         ListNode<T> list_x =  arr_x.length > 0 ? ListNode.from(arr_x) : null;
         ListNode<T> list_y = deleteAtHead(list_x);
 
@@ -32,23 +39,12 @@ class SolutionTest {
 
     }
 
-    @Test void testDeleteAtHead_0() {
-        Integer x[] = {}, e[] = {};
-        testDeleteAtHead(x, e);
-    }
-
-    @Test void testDeleteAtHead_1() {
-        Integer x[] = {1}, e[] = {};
-        testDeleteAtHead(x, e);
-    }
-
-    @Test void testDeleteAtHead_2() {
-        Integer x[] = {1, 2}, e[] = {2};
-        testDeleteAtHead(x, e);
-    }
-
-    @Test void testDeleteAtHead_4() {
-        Integer x[] = {1, 2, 3, 4}, e[] = {2, 3, 4};
-        testDeleteAtHead(x, e);
+    private static Stream<Arguments> provideArgsForTestDeleteAtHead() {
+        return Stream.of(
+                Arguments.of(new Integer[]{}, new Integer[]{}),
+                Arguments.of(new Integer[]{1}, new Integer[]{}),
+                Arguments.of(new Integer[]{1, 2}, new Integer[]{2}),
+                Arguments.of(new Integer[]{1, 2, 3, 4}, new Integer[]{2, 3, 4})
+        );
     }
 }
