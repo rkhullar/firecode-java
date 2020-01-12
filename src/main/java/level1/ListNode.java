@@ -41,4 +41,12 @@ public class ListNode<T> {
             curr = curr.next;
         }
     }
+
+    @SuppressWarnings("unchecked")
+    T[] toArray() {
+        final int n = this.size();
+        final T[] arr = (T[]) new Object[n];
+        this.readInto(arr);
+        return arr;
+    }
 }

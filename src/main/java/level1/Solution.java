@@ -39,7 +39,7 @@ public class Solution {
     }
 
     // Insert a Node at the End of a Linked List
-    public ListNode insertAtTail(ListNode head, int data) {
+    public static ListNode insertAtTail(ListNode head, int data) {
         ListNode curr = head, node = new ListNode(data);
         while (curr != null && curr.next != null)
             curr = curr.next;
@@ -52,7 +52,7 @@ public class Solution {
     }
 
     // Find the Middle of a List in a Single Pass
-    public ListNode findMiddleNode(ListNode head) {
+    public static ListNode findMiddleNode(ListNode head) {
         ListNode slow_curr = head, fast_curr = head;
         while (slow_curr != null && fast_curr != null)
         {
