@@ -93,11 +93,20 @@ class SolutionTest {
         );
     }
 
-    @Test
-    void testFlipItVerticalAxis() {
-        int[][] matrix = {{1, 2}, {3, 4}};
-        int[][] expected = {{2, 1}, {4, 3}};
+    @ParameterizedTest
+    @MethodSource("provideArgsForTestFlipItVerticalAxis")
+    void testFlipItVerticalAxis(int[][] matrix, int[][] expected) {
         flipItVerticalAxis(matrix);
-        //assertArrayEquals(expected, matrix);
+        assertArrayEquals(expected, matrix);
+    }
+
+    private static Stream<Arguments> provideArgsForTestFlipItVerticalAxis() {
+        return Stream.of(
+                Arguments.of(new int[][]{{1,0,0},{0,0,1}}, new int[][]{{0,0,1},{1,0,0}}),
+                Arguments.of(new int[][]{{1,0,1},{1,0,1}}, new int[][]{{1,0,1},{1,0,1}}),
+                Arguments.of(new int[][]{{1,2,3},{4,5,6},{7,8,9}}, new int[][]{{3,2,1},{6,5,4},{9,8,7}}),
+                Arguments.of(new int[][]{{1,0}}, new int[][]{{0,1}}),
+                Arguments.of(new int[][]{{1}}, new int[][]{{1}})
+        );
     }
 }

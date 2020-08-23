@@ -91,13 +91,4 @@ public class Solution {
        arr[idx_1] = arr[idx_2];
        arr[idx_2] = temp;
     }
-
-    public static void main(String[] args) {
-        //int[][] matrix = {{1, 2}, {3, 4}};
-        int[][] matrix = {{1,2,3},{4,5,6}};
-        printMatrix(matrix);
-        System.out.println("--------");
-        flipItVerticalAxis(matrix);
-        printMatrix(matrix);
-    }
 }
