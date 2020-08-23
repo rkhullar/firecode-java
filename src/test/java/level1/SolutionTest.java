@@ -92,4 +92,12 @@ class SolutionTest {
                 Arguments.of(new Integer[]{}, null)
         );
     }
+
+    @Test
+    void testFlipItVerticalAxis() {
+        int[][] matrix = {{1, 2}, {3, 4}};
+        int[][] expected = {{2, 1}, {4, 3}};
+        flipItVerticalAxis(matrix);
+        //assertArrayEquals(expected, matrix);
+    }
 }
