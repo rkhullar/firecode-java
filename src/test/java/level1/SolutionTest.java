@@ -8,7 +8,10 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-import static level1.Solution.*;
+import static level1.Fibonacci.*;
+import static level1.ListUtil.*;
+import static level1.MatrixUtil.*;
+import static level1.MissingNumber.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SolutionTest {
