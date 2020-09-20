@@ -1,4 +1,4 @@
-package level1;
+package firecode.level1;
 
 public class Fibonacci {
 
@@ -13,5 +13,4 @@ public class Fibonacci {
         else
             return fib(n-1) + fib(n-2);
     }
-
 }

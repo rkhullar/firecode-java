@@ -1,9 +1,9 @@
-package level1;
+package firecode.level1;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static level1.Fibonacci.*;
+import static firecode.level1.Fibonacci.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FibonacciTest {
