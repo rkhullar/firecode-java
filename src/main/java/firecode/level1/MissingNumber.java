@@ -1,4 +1,4 @@
-package level1;
+package firecode.level1;
 
 public class MissingNumber {
 

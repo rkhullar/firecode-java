@@ -1,7 +1,7 @@
-package level1;
+package firecode.level1;
 
 import org.junit.jupiter.api.Test;
-import static level1.MissingNumber.*;
+import static firecode.level1.MissingNumber.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MissingNumberTest {
